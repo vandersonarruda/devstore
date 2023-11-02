@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "lucide-react": "^0.291.0",
     "next": "14.0.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
