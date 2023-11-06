@@ -3,6 +3,7 @@ import { z } from 'zod'
 // definimos o schema de validação dos nossos dados
 const envSchema = z.object({
   NEXT_PUBLIC_API_BASE_URL: z.string().url(),
+  APP_URL: z.string().url(),
 })
 
 // aqui iremos passar para o método safeParse o process.env

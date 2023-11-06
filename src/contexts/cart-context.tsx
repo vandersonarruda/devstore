@@ -4,7 +4,7 @@ import { ReactNode, createContext, useContext, useState } from 'react'
 
 // 6. Criar uma interface para o item
 interface CartItem {
-  productId: string
+  productId: number
   quantity: number
 }
 
@@ -12,7 +12,7 @@ interface CartItem {
 interface CartContextType {
   // 5. o items será um array com duas tipagens, precisa de uma interface
   items: CartItem[]
-  addToCart: (productId: string) => void
+  addToCart: (productId: number) => void
 }
 
 // 1. Criar o context
@@ -24,7 +24,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [cartItems, setCartItems] = useState<CartItem[]>([])
 
   // 8. Cria a função para adicionar um item ao carrinho
-  function addToCart(productId: string) {
+  function addToCart(productId: number) {
     setCartItems((state) => {
       // 9. Verifica se o produto já existe no carrinho
       const productInCart = state.some((item) => item.productId === productId)
